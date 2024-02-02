@@ -6,6 +6,10 @@
 //   reverse('hello') === 'olleh'
 //   reverse('Greetings!') === '!sgniteerG'
 
-function reverse(str) {}
+function reverse(str) {
+    return str.split('')
+            .sort((element, nextElement) => element > nextElement ? -1 : element < nextElement ? 1 : 0)
+            .join('');
+}
 
 module.exports = reverse;
