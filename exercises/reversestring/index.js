@@ -8,8 +8,7 @@
 
 function reverse(str) {
     return str.split('')
-            .sort((element, nextElement) => element > nextElement ? -1 : element < nextElement ? 1 : 0)
-            .join('');
+        .reduce((reversed, character) => (character + reversed), '');
 }
 
 module.exports = reverse;
